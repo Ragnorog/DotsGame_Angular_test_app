@@ -1,0 +1,16 @@
+<div class="game-block">
+  <app-main-page-header [settings]="settings"
+                        [playButtonText]="gameStarted? 'Play again' : 'Play'"
+                        (selectedSettings)="selectedSettings($event)"
+                        (play)="play($event)"></app-main-page-header>
+
+  <div class="result-message">
+    {{gameResultMessage}}
+  </div>
+
+  <app-game-field [gameMode]="selectedSettingsItem"></app-game-field>
+
+
+</div>
+
+<app-leader-board [winners]="winners"></app-leader-board>

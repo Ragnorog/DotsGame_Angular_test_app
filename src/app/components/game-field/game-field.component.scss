@@ -1,0 +1,41 @@
+@import '../../../styles/var';
+
+:host {
+  width: 300px;
+  height: 300px;
+  display: grid;
+  grid-auto-columns: auto;
+  margin: 0 auto;
+
+  .cell {
+    border: 1px solid $--color-main-placeholder;
+    &.active {
+      background: $--color-active-game-field-cell;
+    }
+
+    &.player {
+      background: $--color-player-game-field-cell;
+    }
+
+    &.computer {
+      background: $--color-computer-game-field-cell;
+    }
+  }
+
+
+  //mat-grid-tile {
+  //  border: 1px solid $--color-main-placeholder;
+  //
+  //  &.active {
+  //    background: $--color-active-game-field-cell;
+  //  }
+  //
+  //  &.player {
+  //    background: $--color-player-game-field-cell;
+  //  }
+  //
+  //  &.computer {
+  //    background: $--color-computer-game-field-cell;
+  //  }
+  //}
+}

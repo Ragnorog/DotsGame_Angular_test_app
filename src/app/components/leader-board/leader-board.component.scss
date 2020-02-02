@@ -1,0 +1,34 @@
+@import '../../../styles/var';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  padding: 100px 10%;
+
+  .header {
+    text-align: left;
+    font-size: $--font-size-extra-large;
+
+  }
+
+  .list {
+    overflow-y: scroll;
+    font-size: $--font-size-medium;
+    margin-top: 20px;
+    height: 300px;
+
+
+    .list-item {
+      display: flex;
+      justify-content: space-between;
+      background: $--color-main-placeholder;
+      padding: 10px;
+    }
+
+
+    .list-item + .list-item {
+      margin-top: 10px;
+    }
+  }
+}
+

@@ -1,0 +1,19 @@
+<!--<mat-grid-list *ngIf="gameMode"-->
+<!--               [cols]="gameMode.field"-->
+<!--               rowHeight="1:1">-->
+<!--  <mat-grid-tile *ngFor="let cell of field"-->
+<!--                 (click)="cellClick(cell)"-->
+<!--                 [class.active]="cell.active"-->
+<!--                 [class.player]="cell.playerGot"-->
+<!--                 [class.computer]="cell.used && !cell.playerGot">-->
+<!--  </mat-grid-tile>-->
+<!--</mat-grid-list>-->
+<div *ngFor="let cell of field; index as i"
+     (click)="cellClick(cell)"
+     [style.grid-row]="getRow(i)"
+     class="cell"
+     [class.active]="cell.active"
+     [class.player]="cell.playerGot"
+     [class.computer]="cell.used && !cell.playerGot">
+</div>
+

@@ -1,0 +1,21 @@
+@import '../../../styles/var';
+
+:host {
+  height: calc(100% - 6px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 3px solid $--color-main-placeholder;
+  align-items: stretch;
+
+  .game-block {
+    border-right: 3px solid $--color-main-placeholder;
+    padding: 100px 10%;
+  }
+
+  .result-message{
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+  }
+}

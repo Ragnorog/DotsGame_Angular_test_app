@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "var";
+
+body{
+  color: $--color-main-content;
+  box-sizing: border-box;
+  padding: 1%;
+  font-size: $--font-size-base;
+}

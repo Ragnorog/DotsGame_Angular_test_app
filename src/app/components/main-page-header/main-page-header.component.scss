@@ -1,0 +1,8 @@
+@import '../../../styles/var';
+
+:host {
+  form {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}

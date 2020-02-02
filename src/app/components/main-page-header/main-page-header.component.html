@@ -1,0 +1,28 @@
+<form [formGroup]="formGroup"
+      (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <mat-label>
+      Game mode
+    </mat-label>
+    <mat-select formControlName="mode"
+                required>
+      <mat-option *ngFor="let item of settings"
+                  [value]="item">
+        {{item.name}}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="!mode.valid">Please choose the mode</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput
+           required
+           formControlName="name"
+           placeholder="Enter your name">
+    <mat-error *ngIf="!name.valid">Please enter username</mat-error>
+  </mat-form-field>
+  <button mat-raised-button
+          [disabled]="!formGroup.valid"
+          type="submit">
+    {{playButtonText}}
+  </button>
+</form>
